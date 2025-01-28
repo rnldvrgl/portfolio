@@ -1,6 +1,7 @@
 interface SectionLayoutProps {
   children: React.ReactNode
   className?: string
+  id?: string
 }
 
 export default function SectionLayout({
