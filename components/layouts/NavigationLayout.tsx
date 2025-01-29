@@ -1,4 +1,7 @@
-import { useRouter } from 'next/router'
+'use client'
+
+import Link from 'next/link'
+import { usePathname, useRouter } from 'next/navigation'
 import { useEffect, useState } from 'react'
 
 import { BiMenu } from 'react-icons/bi'
@@ -19,6 +22,7 @@ const navItems = [
 
 export default function Navigation() {
   const router = useRouter()
+  const pathname = usePathname()
   const [activeNav, setActiveNav] = useState<string>('')
   const [openMobileNav, setOpenMobileNav] = useState<boolean>(false)
 
@@ -35,7 +39,7 @@ export default function Navigation() {
   }
 
   useEffect(() => {
-    setActiveNav('#' + router.asPath.split('#')[1])
+    setActiveNav('#' + pathname.split('#')[1])
   }, [])
 
   return (
@@ -87,12 +91,12 @@ const NavigationItems = ({
   handleNavLinkActive,
 }: NavigationItemsProps) => {
   return (
-    <a
+    <Link
       href={url}
       className={`active:font-bold  ${activeNav === url && 'font-bold'}`}
       onClick={handleNavLinkActive}
     >
       {label}
-    </a>
+    </Link>
   )
 }

@@ -37,7 +37,7 @@ const socialMedia = [
     label: 'My LinkedIn account:',
     url: (
       <a
-        href="https://www.linkedin.com/in/ronaldvergel"
+        href="https://www.linkedin.com/in/rnldvrgl"
         target="_blank"
         className="font-medium"
       >
@@ -76,7 +76,7 @@ const socialMedia = [
         target="_blank"
         className="font-medium"
       >
-        /glenmarami
+        /rnldvrgl
       </a>
     ),
   },
@@ -94,7 +94,7 @@ const socialMedia = [
         target="_blank"
         className="font-medium"
       >
-        /glenmarami
+        /rnldvrgl
       </a>
     ),
   },
@@ -112,7 +112,7 @@ const socialMedia = [
         target="_blank"
         className="font-medium"
       >
-        /glenmarami
+        /ronaldvergel.crisostomoii
       </a>
     ),
   },
