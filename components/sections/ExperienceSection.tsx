@@ -10,28 +10,36 @@ import 'react-vertical-timeline-component/style.min.css'
 const ExperienceSection = () => {
   const experiencesData = [
     {
-      title: 'Graduated bootcamp',
-      location: 'Miami, FL',
-      description:
-        'I graduated after 6 months of studying. I immediately found a job as a front-end developer.',
+      title: 'GeoPro Global Solutions Inc.',
+      subtitle: 'Web Developer Intern',
+      location: 'Clark, Pampanga',
+      projects: [
+        {
+          name: 'Genie',
+          tasks: [
+            'Built a responsive web application using Next.js, TypeScript, and Tailwind CSS for a client-side management system for a local business.',
+            'Worked closely with the client to define the design, implement the frontend, and test the application.',
+          ],
+        },
+      ],
       //   icon: React.createElement('img', { src: arobase, alt: 'Votre alt' }),
-      date: '2019',
+      date: 'March 2023 - May 2023',
     },
     {
-      title: 'Front-End Developer',
-      location: 'Orlando, FL',
-      description:
-        'I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.',
+      title: 'GeoPro Global Solutions Inc.',
+      subtitle: 'Full-Stack Web Developer',
+      location: 'Clark, Pampanga',
+      projects: [
+        {
+          name: 'Genie',
+          tasks: [
+            'Built a responsive web application using Next.js, TypeScript, and Tailwind CSS for a client-side management system for a local business.',
+            'Worked closely with the client to define the design, implement the frontend, and test the application.',
+          ],
+        },
+      ],
       //   icon: React.createElement('img', { src: arobase, alt: 'Votre alt' }),
-      date: '2019 - 2021',
-    },
-    {
-      title: 'Full-Stack Developer',
-      location: 'Houston, TX',
-      description:
-        "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
-      //   icon: React.createElement('img', { src: arobase, alt: 'Votre alt' }),
-      date: '2021 - present',
+      date: 'July 2023 - present',
     },
   ]
 
@@ -40,26 +48,39 @@ const ExperienceSection = () => {
       id="experience"
       className="flex items-center"
     >
-      <div>
-        <h1 className="font-bold text-4xl text-[#191919] pt-12 pb-12">
-          Experience
-        </h1>
-      </div>
+      <h1 className="font-bold text-4xl py-12">Professional Experience</h1>
       <VerticalTimeline>
         {experiencesData.map((experience, index) => (
           <VerticalTimelineElement
             // visible={true}
             className="vertical-timeline-element--work"
             contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-            contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
             key={index}
             date={experience.date}
             iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
             // icon={<div>{experience.icon}</div>}
           >
-            <h3>{experience.title}</h3>
-            <h4 className="vertical-timeline-element-subtitle">Miami, FL</h4>
-            <p>{experience.description}</p>
+            <h3 className="vertical-timeline-element-title font-bold !text-lg">
+              {experience.title}
+            </h3>
+            <h4 className="vertical-timeline-element-subtitle">
+              {experience.subtitle}
+            </h4>
+            <div className="flex flex-wrap gap-4 text-white">
+              {experience.projects.map((project, projectIndex) => (
+                <div
+                  key={projectIndex}
+                  className="flex flex-col gap-2 mt-4"
+                >
+                  <div className="font-semibold">{project.name}</div>
+                  <ul className="list-disc pl-6">
+                    {project.tasks.map((task, taskIndex) => (
+                      <li key={taskIndex}>{task}</li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
           </VerticalTimelineElement>
         ))}
       </VerticalTimeline>

@@ -43,7 +43,7 @@ export default function Navigation() {
   }, [])
 
   return (
-    <nav className="bg-[#303030] md:bg-white sticky top-0 z-10 border-b-[1px] py-3">
+    <nav className="bg-charcoal text-offwhite sticky top-0 z-10 border-b-[1px] py-3">
       <div className="mx-auto sm:w-[93vw] md:w-[90vw] lg:w-[900px]">
         <div className="flex md:hidden justify-between mb-3 md:mb-0 px-3">
           <img
@@ -62,7 +62,7 @@ export default function Navigation() {
           </button>
         </div>
         <ul
-          className={`md:flex md:gap-6 md:justify-center text-white md:text-[#191919] 
+          className={`md:flex md:gap-6 md:justify-center 
           ${openMobileNav ? 'block' : 'hidden'}`}
         >
           {navItems.map((item) => (

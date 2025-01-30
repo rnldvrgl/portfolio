@@ -1,6 +1,5 @@
 import Navigation from '@/components/layouts/NavigationLayout'
-import ContactSection from '@/components/sections/ContactSection'
-import ExperienceSection from '@/components/sections/ExperienceSection'
+import { ContactSection, ExperienceSection } from '@/components/sections'
 
 export default function Home() {
   return (
